@@ -1,0 +1,52 @@
+header {
+    margin: 2rem 0;
+  }
+  
+  #featured {
+   
+    margin-bottom: 2rem;
+  }
+
+  /* .carousel-item{
+      height: 500px;
+      background:#90f
+  }
+
+  .carousel-item:nth-child(2) {
+    background:blue;
+  } */
+
+  
+  .profile-info img {
+    max-width: 6rem;
+    max-height: 6rem;
+    border-radius: 1rem;
+    margin: -0.5rem 1rem 0 0;
+  }
+  
+  .gallery a {
+    width: 48%;
+    margin: 1%;
+    height: 10rem;
+    background: #99F;
+    display: block;
+  }
+  
+  .gallery {
+    margin: 2rem -1% 0;
+  }
+  
+  @media all and (min-width: 576px) {
+    .gallery a {
+      width: 31.3%;
+    }
+  }
+  
+  @media all and (min-width: 992px) {
+    .gallery a {
+      width: 23%;
+    }
+  }
+  
+/* Font Family */
+h1 { font-family: Raleway; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; } h3 { font-family: Raleway; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px; } p { font-family: Raleway; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; } blockquote { font-family: Raleway; font-size: 21px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; } pre { font-family: Raleway; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 18.5714px; }

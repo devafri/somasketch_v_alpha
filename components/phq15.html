@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PHQ-15: Somatic Severity Test</title>
+    <link rel="stylesheet" type="text/css" href="../css/exampleStyles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+        <a class = "navbar-brand" id = "somaSketchLogo" href="/index.html">
+            <img src="../img/somasketch_logo.svg" alt="Soma Sketch Logo" width = "30" height = "30" class = "d-inline-block align-top">
+            Soma Sketch</a>
+        <button class = "navbar-toggler" type ="button" data-toggle="collapse" data-target="#navbarPrimary">
+            <span class = "navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" role="navigation" id = "navbarPrimary">        
+            
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                <li class = "nav-item">
+                    <a class ="nav-link btn btn-outline-info" href="#product">Product</a>
+                </li>
+                <li class = "nav-item">
+                    <a class ="nav-link btn btn-outline-info" href="#team">Team</a>
+                </li>
+                <li class = "nav-item active">
+                    <a class ="nav-link btn btn-outline-info" href="#testimonials">Testimonials</a> 
+                </li>
+                <li class = "nav-item">
+                    <a class ="nav-link btn btn-outline-info" href="#demo">Demo</a> 
+                </li>
+                <li class = "nav-item">
+                    <a class ="nav-link btn btn-outline-info" href="#contact">Contact</a> 
+                </li>	
+                <li class = "nav-item">
+                    <a  class ="nav-link btn btn-outline-info"href="assessments.html">Mental Health Assessments</a> 
+                </li>        
+                <li class = "nav-item">
+                    <a  class ="nav-link btn btn-outline-info"href="canvas.html">Somatic Journal App</a> 
+                </li>      
+                <li class = "nav-item">
+                    <a  class ="nav-link btn btn-outline-info"href="http://www.somasight.net">For Practitioners</a> 
+
+                </li>                  
+            </ul>
+        <!-- /.navbar-collapse -->
+        </div>
+    </nav>
+    <div class="container">
+        <div id="home" class="flex-center flex-column justify-content-end">
+            <h2>Mental Health Assessment</h2>
+            <a class = "btn btn-info btn-sm" href="phq15.html">PHQ-15</a>
+            <a class = "btn btn-info btn-sm" href="aces.html">ACES</a>
+            <a class = "btn btn-info btn-sm" href="dass21.html">DASS-21</a>
+            <a class = "btn btn-info btn-sm" href="gad7.html">GAD-7</a>
+            <a class = "btn btn-info btn-sm" href="oldenberg.html">OLBI</a>
+        </div>
+    </div>
+    <div class="container">
+
+        <div class="row" id="initialScreen">
+
+            <div class="col-2"></div>
+
+            <div class="col-8 mt-5 mb-5">
+
+                <h1>PHQ-15: Somatic Symptom Severity Test</h1>
+
+                <p>
+                    This is a brief, 15-item questionnaire to screen and monitor somatic symptom severity in clinical practice and research.
+                </p>
+
+                <p>The <a href="https://en.wikipedia.org/wiki/Patient_Health_Questionnaire#15-item_somatic_scale">PHQ-15</a> The Patient Health Questionnaire (PHQ-15) is a somatic symptoms subscale derived from a self- administered version of the Primary Care Evaluation of Mental Disorders (PRIME-MD) diagnostic instrument for common mental disorders </p>
+
+                <div class="btn btn-warning btn-lg mt-1 mb-1" id="startButton">Start test</div>
+                <p style="font-size:10px;">
+                    <a href="mailto:hello@somasketch.com" id="signature">./by-Soma Sketch</a>
+                </p>
+
+                <p>
+                    <span id=colour_red>THIS IS NOT A DIAGNOSIS OF DEPRESSION, ANXIETY NOR STRESS. This tool does not
+                        provide medical advice and it is intended for informational purposes only</span>.
+                </p>
+
+            </div>
+
+            <div class="col-2"></div>
+
+        </div>
+
+        <div class = "row" id = "quiz">
+                <header>
+                    <div id = "testName">PHQ-15: Somatic Symptom Severity Test</div>
+                </header>
+                <div class="col-2">
+                </div>
+                
+                <div class="col-8 mt-5 mb-5">
+    
+                    <h2>Over the last week, how often have you been bothered by...</h2>
+                    
+                    <h2 class = "response mb-3"  id = "showQuestion">questions</h2>
+                    
+                    <div class = "row">
+                       
+                            <button class="button"  id = "r0">Not at all</button>
+                            <button class="button"  id = "r1">Bothered a little</button>
+                            <button class="button"  id = "r2">Bothered a lot</button>
+                        
+                    </div>
+                    <p></p>
+                    <div id="hud">
+                        <div id="hud-item">
+                            <p id="progressText" class="hud-prefix">
+                            Question
+                            </p>
+                            <div id="progressBar">
+                            <div id="progressBarFull"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "row">
+                            <ul class="pager">
+                                <a href="#" id = "previous" class = "previous">&laquo;Previous</a>
+                                <a href="#" id = "next" class = "next">&raquo;Next</a>
+                            </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class = "row" id = "final_result">
+                    <header>
+                        <div id = "testName">PHQ-15: Somatic Symptom Severity Test</div>
+                    </header>
+                <div class="col-2"></div>
+    
+                <div class="col-8 mt-5 mb-5">
+                    <div class = row>
+                        <h1>Your PHQ-15 score is</h1>
+                        <h1 id = "finalScore">score</h1>
+                    </div>
+                    <div class = row>Somatic Symptom Severity Scale</div>
+                    <div class = row>
+                        <div class="row mb-2 justify-content-center">
+                            <span class="border border-success" id="SNormal">Minimal</span>
+                            <span class="border border-warning" id="SMild">Low</span>
+                            <span class="border border-warning" id="SModerate">Medium</span>
+                            <span class="border border-danger" id="SSevere">High</span>
+                        </div>
+                    </div>
+                    <div class = row>
+                        <button type ="button" class = "btn-warning" id ="restart">Restart</button>
+                        <button type ="button" class = "btn-primary" id ="home">Home</button>
+                    </div>
+                </div>
+    
+                <div class="col-2"></div>
+            </div>
+            
+            
+        </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="phq15_code.js"></script>
+</body>
+
+</html>

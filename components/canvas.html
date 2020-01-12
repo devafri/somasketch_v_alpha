@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Literally Canvas</title>
+    <link href="/css/literallycanvas.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=0 initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/react/0.14.7/react-with-addons.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/react/0.14.7/react-dom.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
+
+    <style type="text/css">
+      .fs-container {
+        min-width: 320px;
+        max-width: 500px;
+        margin: auto;
+        padding-bottom: 3rem;
+      }
+      .literally {
+        width: 100%;
+        height: 100%;
+        position: relative;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+      <a class = "navbar-brand" id = "somaSketchLogo" href="/index.html">
+          <img src="/img/somasketch_logo.svg" alt="Soma Sketch Logo" width = "30" height = "30" class = "d-inline-block align-top">
+          Soma Sketch</a>
+      <button class = "navbar-toggler" type ="button" data-toggle="collapse" data-target="#navbarPrimary">
+          <span class = "navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" role="navigation" id = "navbarPrimary">        
+          
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+              <li class = "nav-item">
+                  <a class ="nav-link btn btn-outline-info" href="#product">Product</a>
+              </li>
+              <li class = "nav-item">
+                  <a class ="nav-link btn btn-outline-info" href="#team">Team</a>
+              </li>
+              <li class = "nav-item active">
+                  <a class ="nav-link btn btn-outline-info" href="#testimonials">Testimonials</a> 
+              </li>
+              <li class = "nav-item">
+                  <a class ="nav-link btn btn-outline-info" href="#demo">Demo</a> 
+              </li>
+              <li class = "nav-item">
+                  <a class ="nav-link btn btn-outline-info" href="#contact">Contact</a> 
+              </li>	
+              <li class = "nav-item">
+                  <a  class ="nav-link btn btn-outline-info"href="/components/assessments.html">Mental Health Assessments</a> 
+              </li>        
+              <li class = "nav-item">
+                  <a  class ="nav-link btn btn-outline-info"href="/components/canvas.html">Somatic Journal App</a> 
+              </li>      
+              <li class = "nav-item">
+                  <a  class ="nav-link btn btn-outline-info"href="#forPractitioners">For Practitioners</a> 
+              </li>                  
+          </ul>
+      <!-- /.navbar-collapse -->
+      </div>
+  </nav>
+    <div class="fs-container">
+      <h2>Sketch</h2>
+      <p>Draw how your body feels. Use colours, patterns, shapes and symbols to represent moods, feelings and sensations 
+        in your body, both good and bad. Feel free to use notes and labels to describe further. </p>
+        
+      <div id="lc"></div>
+      <div class="row justify-content-between">
+        <button type="button" class="btn btn-primary">Save Sketch</button>
+        <div class="form-group">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="gridRadios" id="femaleSVG" value="femaleSVG" onclick="changeGenderBackground()">
+            <label class="form-check-label" for="femaleSVG">
+              Female
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="gridRadios" id="maleSVG" value="maleSVG" onclick="changeGenderBackground()">
+            <label class="form-check-label" for="maleSVG">
+              Male
+            </label>
+          </div>
+      
+        </div>
+      
+      </div>
+        <div class = "container">
+          <h2>Journal Entry</h2>
+          <p id="journalDate"></p>
+          <form>
+            <div class="form-group">
+              <label>How are you feeling today? Describe your physical and mental state. List any emotions or sensations, both comfortable or uncomfortable.</label>
+              <textarea class="form-control" id="feelingEntry" placeholder="I feel..." rows ="3"></textarea>
+            </div>
+            <div class="form-group">
+              <label>List three things you did well today or are grateful for:</label>
+              <textarea class="form-control" id="gratitudeEntry" placeholder="I am happy that..." rows ="3"></textarea>
+            </div>
+            <button type="button" class="btn btn-primary">Save Journal Entry</button>
+          </form>
+        </div>
+    </div>
+
+    <!-- you really ought to include react-dom, but for react 0.14 you don't strictly have to. -->
+    <!-- <script src="../js/core/"></script> -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="/js/literallycanvas.js"></script>
+    <script src="/date.js"></script>
+
+    <script src="/js/lc.js"></script>
+    <script>
+      function changeGenderBackground() {
+        if(document.getElementById("femaleSVG").checked){
+          $('body').append('<style type="text/css">.lc-drawing.with-gui{ background-image: url(../img/female_vector.png); background-size: 100% 100%; background-repeat: no-repeat;}</style>');
+        }else if(document.getElementById("maleSVG").checked){
+            $('body').append('<style type="text/css">.lc-drawing.with-gui{ background-image: url(../img/male_istock.jpg); background-size: 100% 100%; background-repeat: no-repeat;}</style>');
+          }
+ 
+          console.log("Button is click");
+        }
+    </script>
+  </body>
+</html>
