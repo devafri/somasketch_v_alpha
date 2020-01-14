@@ -1275,9 +1275,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#de8e0009', e
     font-size: 30px;
     line-height: 46px;
     color: teal;
-    margin-top: 15%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 10% 5%;
    }
 
    .landing-page .section-testimonial .carousel-inner  p{
@@ -1885,13 +1883,13 @@ background: radial-gradient(ellipse at center,  #1e5799 0%,rgba(54, 151, 142, 0.
     color: #746C94;
   }
 
-  body > nav > a {
-    /* font-family: Comfortaa; */
+  /* body > nav > a {
+    font-family: 'Raleway';
     color: #726a95;
-  }
+  } */
   
   #somaSketchLogo{
-    font-family: Comfortaa;
+    font-family: 'Raleway';
     color: #726a95;
   }
 
@@ -1905,9 +1903,9 @@ background: radial-gradient(ellipse at center,  #1e5799 0%,rgba(54, 151, 142, 0.
     margin:10px;
   }
   
-  .carousel-caption{
-    position: initial;
-    color: black;
+  #carouselExampleIndicators > div > div.carousel-item.active > h3{
+    position: relative;
+    /* color: black; */
   }
 
   .carousel-indicators {
@@ -1916,9 +1914,23 @@ background: radial-gradient(ellipse at center,  #1e5799 0%,rgba(54, 151, 142, 0.
     border-color: transparent;
   }
 
+  #carouselExampleIndicators > div > div:nth-child(4) > h3{
+    margin: auto;
+  }
+
   .carousel-item, .carousel-item.active{
     margin-top: 10%;
-    margin-left: 10%;
+    /* margin-left: 10%; */
     width: 80%
 
+  }
+  h1 { font-family: Raleway; font-size: 23px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 23px; } h3 { font-family: Raleway; font-size: 17px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 23px; } p { font-family: Raleway; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 23px; } blockquote { font-family: Raleway; font-size: 17px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 23px; } pre { font-family: Raleway; font-size: 11px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 23px; }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    height: 30px;
+    width: 30px;
+    background-size: 150%, 150%;
+    opacity: 75%;
+    background-color: #cfcfe1;
   }
