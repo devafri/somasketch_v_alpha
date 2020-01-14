@@ -767,10 +767,11 @@ a:focus, a:active {
 }
 .landing-page .carousel-indicators li {
   margin: 1px 10px;
-  border-color: #888888;
+  border-color:transparent;
+  background-color: midnightblue;
 }
 .landing-page .carousel-indicators .active{
-  background-color: #888888;
+  background-color: darkred;
 }
 .landing-page .carousel-indicators.carousel-indicators-blue li {
   border-color: #00bbff;
@@ -1242,6 +1243,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#de8e0009', e
   }
   .landing-page .section-testimonial .carousel{
     margin-top: 50px;
+    background-color: lavender;
+    border-radius: 10px;
     
   }
     .landing-page .section-testimonial .carousel-inner .item .mask{
@@ -1267,9 +1270,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#de8e0009', e
    }
 
    .landing-page .section-testimonial .carousel-inner  h3{
+  
     font-weight: 300;
     font-size: 30px;
     line-height: 46px;
+    color: teal;
+    margin-top: 15%;
+    margin-left: auto;
+    margin-right: auto;
    }
 
    .landing-page .section-testimonial .carousel-inner  p{
@@ -1898,5 +1906,19 @@ background: radial-gradient(ellipse at center,  #1e5799 0%,rgba(54, 151, 142, 0.
   }
   
   .carousel-caption{
+    position: initial;
     color: black;
+  }
+
+  .carousel-indicators {
+
+    background-color: transparent;
+    border-color: transparent;
+  }
+
+  .carousel-item, .carousel-item.active{
+    margin-top: 10%;
+    margin-left: 10%;
+    width: 80%
+
   }
