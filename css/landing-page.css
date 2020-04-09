@@ -1934,3 +1934,8 @@ background: radial-gradient(ellipse at center,  #1e5799 0%,rgba(54, 151, 142, 0.
     opacity: 75%;
     background-color: #cfcfe1;
   }
+
+  .info h1
+  {
+    line-height: 1.5;
+  }
